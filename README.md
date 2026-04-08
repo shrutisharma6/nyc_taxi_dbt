@@ -78,7 +78,7 @@ dbt docs serve
 
 **1. Clone the repo**
 \```bash
-git clone https://github.com/shrutisharma6/nyc-taxi-dbt.git
+git clone https://github.com/shrutisharma6/nyc_taxi_dbt.git
 cd nyc-taxi-dbt
 \```
 

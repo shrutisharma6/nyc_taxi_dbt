@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: stg_taxi_trips
+    description: "Cleaned and standardized NYC Yellow Taxi trip records for Jan 2024"
+    columns:
+      - name: pickup_at
+        description: "Trip pickup timestamp"
+        tests:
+          - not_null
+
+      - name: fare_amount
+        description: "Base fare in USD"
+        tests:
+          - not_null
+
+      - name: payment_type
+        description: "Payment method code"
+        tests:
+          - not_null
+          - accepted_values:
+              values: [1, 2, 3, 4, 5, 6]
+
+      - name: trip_distance
+        tests:
+          - not_null

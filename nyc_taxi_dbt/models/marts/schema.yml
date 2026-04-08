@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: mart_daily_revenue
+    description: "Daily revenue aggregations by time of day, payment method and trip category"
+    columns:
+      - name: trip_date
+        tests:
+          - not_null
+      - name: total_revenue
+        tests:
+          - not_null
+
+  - name: mart_location_performance
+    description: "Revenue and trip metrics aggregated by pickup location"
+    columns:
+      - name: pickup_location_id
+        tests:
+          - not_null
+          - unique
